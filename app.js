@@ -14,7 +14,7 @@ function adicionarAmigo(){
 }
 
 function limparCampo(){ //limpa o campo de entrada
-    amigo = document.querySelector('input');
+    let amigo = document.querySelector('input');
     amigo.value = ''
 }
 
@@ -31,6 +31,10 @@ function atualizarListaAmigos() {
 }
 
 function sortearAmigo(){
+    if (listaDeAmigos.length==0){
+        alert('Adcione pelo menos um amigo antes de sortear!');
+        return;
+    }
     let indice = Math.floor(Math.random() * listaDeAmigos.length); //sorteia o indice da Lista De Amigos,
     let sorteado = listaDeAmigos[indice]; //Obtém o nome da lista de acordo com o indice
     /*console.log(`Indice = ${indice}`);
