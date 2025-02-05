@@ -8,5 +8,11 @@ function adicionarAmigo(){
     }else{
         listaDeAmigos.push(amigo);
         console.log(listaDeAmigos);
+        limparCampo();
     }
+}
+
+function limparCampo(){
+    amigo = document.querySelector('input');
+    amigo.value = ''
 }
